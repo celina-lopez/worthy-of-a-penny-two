@@ -1,16 +1,37 @@
 baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
-title = "Homepage"
+title = "Worthy of a penny"
 theme = 'tailbliss'
-# RSS, categories and tags disabled for an easy start
-# See configuration options for more details: 
-# https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
-ignorefiles = ["/themes/tailbliss/content/.*"]
+
+ignorefiles = [
+  "/themes/tailbliss/content/.*",
+]
 [outputformats]
   [outputformats.SearchIndex]
     baseName = "search"
     mediaType = "application/json"
 [outputs]
   home = ["HTML", "RSS", "SearchIndex"]
+
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+canonifyURLs = true
+paginate = 9
+enableInlineShortcodes = true
+
+[params]
+author = "Marisa Lopez"
+github = "https://github.com/celina-lopez"
+sitename = "Worthyofapenny"
+description = "thoughts worthy of a penny"
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[taxonomies]
+tag = "Tags"
+

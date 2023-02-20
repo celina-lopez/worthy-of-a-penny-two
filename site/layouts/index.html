@@ -205,7 +205,7 @@
                               {{.Title}}
                           </a>
                           <p class="mt-3 text-base text-gray-900 dark:text-gray-300">
-                              {{ .Params.summary }}
+                              {{ .Params.description }}
                           </p>
                       </div>
                       <div class="flex pt-6 font-medium text-indigo-600 dark:text-indigo-100 text-md">
@@ -217,19 +217,7 @@
                           {{- end -}}
                       </div>
                       <div class="flex items-center mt-6">
-                          <div class="flex-shrink-0">
-                              <span class="sr-only">{{ .Params.author }}</span>
-                              {{ with .Params.authorimage }}
-                              {{ with resources.Get . }}
-                              {{ $authorimage := (.Resize "400x webp").RelPermalink }}
-                              <img class="w-10 h-10 rounded-full" src="{{ $authorimage }}" alt="">
-                              {{ end }}
-                              {{ end }}
-                          </div>
-                          <div class="pt-1 ml-3">
-                            <p class="text-sm font-medium text-gray-900 dark:text-white">
-                                {{ .Params.author }}
-                            </p>
+                          <div class="pt-1">
                             <div class="flex space-x-1 text-sm text-gray-500 dark:text-white">
                               <time datetime="2020-02-12">{{.Date.Format "2006-01-02"}}</time>
                               <span aria-hidden="true">&middot;</span>
