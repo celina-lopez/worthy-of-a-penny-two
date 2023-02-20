@@ -8,3 +8,9 @@ theme = 'tailbliss'
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 ignorefiles = ["/themes/tailbliss/content/.*"]
+[outputformats]
+  [outputformats.SearchIndex]
+    baseName = "search"
+    mediaType = "application/json"
+[outputs]
+  home = ["HTML", "RSS", "SearchIndex"]
