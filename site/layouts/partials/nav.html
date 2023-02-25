@@ -1,13 +1,13 @@
-<div class="top-0 z-50 w-full text-gray-200 bg-gray-900 border-2 border-gray-900 md:sticky border-b-stone-200/10">
+<div class="top-0 z-50 w-full dark:text-gray-200 dark:bg-gray-900 bg-gray-100 text-gray-900 border-2 dark:border-gray-900  md:sticky dark:border-b-stone-200/10">
     <div x-data="{ open: false }"
          class="flex flex-col max-w-full px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
         <div class="flex flex-row items-center justify-between p-4">
-            <a href="/" class="flex text-gray-100 transition duration-1000 ease-in-out group">
+            <a href="/" class="flex dark:text-gray-100 text-gray-900 transition duration-1000 ease-in-out group">
                 <img src="/img/logo.svg"
                      class="transition-opacity h-9 w-9 group-hover:opacity-50 group-focus:opacity-70"
                      alt="{{ .Site.Title }} Logo" />
                 <div
-                     class="mt-1 ml-3 text-xl font-black tracking-tight text-gray-100 uppercase transition-colors group-hover:text-gray-400/60">
+                     class="mt-1 ml-3 text-xl font-black tracking-tight text-gray-900 dark:text-gray-100 uppercase transition-colors dark:group-hover:text-gray-400/60 group-hover:opacity-50">
                     {{ .Site.Title }}</div>
             </a>
             <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" role="navigation" aria-expanded="false" aria-label="Main" aria-controls="menuItems">
@@ -79,7 +79,7 @@
                                   <p class="text-sm">my favorite sites</p>
                               </div>
                           </a>
-                          <a class="flex items-start p-2 bg-transparent rounded-lg group row hover:text-white focus:text-white hover:bg-indigo-600 focus:bg-indigo-700 focus:outline-none focus:shadow-outline"
+                          <!-- <a class="flex items-start p-2 bg-transparent rounded-lg group row hover:text-white focus:text-white hover:bg-indigo-600 focus:bg-indigo-700 focus:outline-none focus:shadow-outline"
                           href="/contact">
                           <div class="p-3 text-white bg-indigo-600 rounded-lg group-hover:bg-gray-900">
                               <svg fill="none" stroke="currentColor" stroke-linecap="round"
@@ -94,7 +94,7 @@
                               <p class="font-semibold">Contact</p>
                               <p class="text-sm">reach out!</p>
                           </div>
-                      </a>
+                      </a> -->
                       </div>
                   </div>
               </div>

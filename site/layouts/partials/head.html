@@ -18,10 +18,14 @@
     }
 </script>
 {{ $styles := resources.Get "/css/style.css" | postCSS }}
+{{ $custom_styles := resources.Get "/css/custom_style.css" }}
 {{ if .Site.IsServer }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+<link rel="stylesheet" href="{{ $custom_styles.RelPermalink }}" />
 {{ else }}
 {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+{{ $custom_styles := $custom_styles | minify | fingerprint | resources.PostProcess }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
+<link rel="stylesheet" href="{{ $custom_styles.RelPermalink }}" integrity="{{ $custom_styles.Data.Integrity }}" />
 {{ end }}
 <script src="https://unpkg.com/lunr/lunr.js"></script>
